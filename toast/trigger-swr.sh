@@ -46,7 +46,7 @@ files=(
 for i in "${files[@]}"
 do
   echo "Downloading... $i"
-  curl -LJs -o $i https://raw.githubusercontent.com/flosrn/expansion-pack/main/$DIRNAME/$i
+  curl -LJs -o $i https://raw.githubusercontent.com/flosrn/expansion-pack/master/$DIRNAME/$i
 done
 
 echo ""
