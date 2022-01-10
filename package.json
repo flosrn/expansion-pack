@@ -1,0 +1,8 @@
+{
+  "name": "expansion-pack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/flosrn/expansion-pack.git",
+  "author": "flosrn <flosrn.dev@gmail.com>",
+  "license": "MIT"
+}
