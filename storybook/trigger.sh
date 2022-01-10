@@ -15,7 +15,8 @@ echo -e "${NC}"
 echo -e "${GREEN}[Step 1] Initializing Storybook with Webpack 5${NC}"
 echo -e "This may take a while to download."
 echo ""
-echo y | npx -y sb init --builder webpack5
+echo y | npx sb init --builder webpack5
+echo yes
 echo -e ""
 echo -e "Installing Dev Packages: ${GREEN}@storybook/addon-postcss plop inquirer-fuzzy-path"
 echo -e "${NC}"
@@ -26,8 +27,8 @@ echo -e "${GREEN}[Step 2] Adding Webpack 5 as a resolution${NC}"
 npx --no -y npe resolutions.webpack "^5"
 yarn
 
-# echo -e "${GREEN}[Step 3] Adding BROWSER=none to yarn storybook${NC}"
-# npx -y npe scripts.storybook "BROWSER=none start-storybook -p 6006"
+ echo -e "${GREEN}[Step 3] Adding BROWSER=none to yarn storybook${NC}"
+ npx npe scripts.storybook "BROWSER=none start-storybook -p 6006"
 # endregion  //*======== Install Packages ===========
 
 #region  //*=========== Create Directories ===========
