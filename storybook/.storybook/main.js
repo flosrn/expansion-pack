@@ -6,6 +6,8 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
+    'storybook-theme-css-vars',
     {
       /**
        * NOTE: fix Storybook issue with PostCSS@8

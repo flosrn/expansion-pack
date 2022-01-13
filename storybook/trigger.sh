@@ -18,7 +18,7 @@ echo ""
 echo y | npx sb init --builder webpack5
 echo yes
 echo -e ""
-echo -e "Installing Dev Packages: ${GREEN}@storybook/addon-postcss plop inquirer-fuzzy-path"
+echo -e "Installing Dev Packages: ${GREEN}@storybook/addon @storybook/addon-postcss @storybook/theming @storybook/addon-a11y plop inquirer-fuzzy-path"
 echo -e "${NC}"
 yarn add -D @storybook/addon-postcss plop inquirer-fuzzy-path
 
@@ -27,8 +27,8 @@ echo -e "${GREEN}[Step 2] Adding Webpack 5 as a resolution${NC}"
 npx --no -y npe resolutions.webpack "^5"
 yarn
 
- echo -e "${GREEN}[Step 3] Adding BROWSER=none to yarn storybook${NC}"
- npx npe scripts.storybook "BROWSER=none start-storybook -p 6006"
+echo -e "${GREEN}[Step 3] Adding storybook-generate components command${NC}"
+npx npe scripts.storybook-generate "yarn plop"
 # endregion  //*======== Install Packages ===========
 
 #region  //*=========== Create Directories ===========
@@ -44,11 +44,13 @@ DIRNAME="storybook"
 
 files=(
   ".storybook/preview.js"
+  ".storybook/manager.js"
   ".storybook/main.js"
   "plopfile.js"
   "src/generators/Component.stories.tsx.hbs"
   "src/generators/story.js"
 )
+
 for i in "${files[@]}"
 do
   echo "Downloading... $i"
