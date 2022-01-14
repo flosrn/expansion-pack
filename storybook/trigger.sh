@@ -5,11 +5,10 @@ GREEN='\033[1;32m'
 CYAN='\033[1;36m'
 NC='\033[0m'
 
-echo -e ""
-echo -e ""
-echo -e "${GREEN}========================="
+echo ""
+echo -e "${GREEN}======================="
 echo "Storybook installing..."
-echo "========================="
+echo "======================="
 echo -e "${NC}"
 
 #region  //*=========== Install Packages ===========
@@ -76,5 +75,5 @@ echo ""
 echo "Run yarn storybook:generate to generate your storybook components"
 echo "Run yarn storybook to start storybook"
 
-echo | 5
+yes 5
 
