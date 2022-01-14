@@ -67,8 +67,8 @@ echo ""
 echo -e "${GREEN}[Step 5] Adding storybook folder to tailwind purge${NC}"
 sed -i -e "s/'.\/src\/\*\*\/\*.{js,jsx,ts,tsx}'/'.\/src\/\*\*\/\*.{js,jsx,ts,tsx}', '.\/.storybook\/\*.{js,jsx,ts,tsx}'/g" tailwind.config.js
 echo ""
+echo "tailwind.config.js has been updated."
 rm -r tailwind.config.js-e
-echo ""
 
 echo ""
 echo -e "${CYAN}============================================"
@@ -76,7 +76,5 @@ echo "🔋 Storybook Expansion Completed"
 echo ""
 echo "Run yarn storybook:generate to generate your storybook components"
 echo "Run yarn storybook to start storybook"
-
-echo 5
-echo yes
+echo ""
 
