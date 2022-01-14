@@ -75,5 +75,6 @@ echo ""
 echo "Run yarn storybook:generate to generate your storybook components"
 echo "Run yarn storybook to start storybook"
 
-yes 5
+echo 5
+echo yes
 
