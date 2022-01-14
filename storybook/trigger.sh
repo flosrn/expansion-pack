@@ -25,10 +25,13 @@ yarn add -D @storybook/addon-postcss plop inquirer-fuzzy-path
 echo -e "${NC}"
 echo -e "${GREEN}[Step 2] Adding Webpack 5 as a resolution${NC}"
 npx --no -y npe resolutions.webpack "^5"
+echo ""
 yarn
 
+echo ""
 echo -e "${GREEN}[Step 3] Adding storybook-generate components command${NC}"
-npx npe scripts.storybook-generate "yarn plop"
+npx npe scripts.storybook:generate "yarn plop"
+echo ""
 # endregion  //*======== Install Packages ===========
 
 #region  //*=========== Create Directories ===========
@@ -65,6 +68,9 @@ echo ""
 echo ""
 echo -e "${CYAN}============================================"
 echo "🔋 Storybook Expansion Completed"
-echo "Run yarn plop to generate your storybook components"
-echo "Run yarn storybook to start the storybook"
+echo ""
+echo "Run yarn storybook:generate to generate your storybook components"
+echo "Run yarn storybook to start storybook"
+
+echo 5
 
