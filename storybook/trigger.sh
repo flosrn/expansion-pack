@@ -67,6 +67,8 @@ echo ""
 echo -e "${GREEN}[Step 5] Adding storybook folder to tailwind purge${NC}"
 sed -i -e "s/'.\/src\/\*\*\/\*.{js,jsx,ts,tsx}'/'.\/src\/\*\*\/\*.{js,jsx,ts,tsx}', '.\/.storybook\/\*.{js,jsx,ts,tsx}'/g" tailwind.config.js
 echo ""
+rm tailwind.config.js-e
+echo ""
 
 echo ""
 echo -e "${CYAN}============================================"
