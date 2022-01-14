@@ -5,6 +5,8 @@ GREEN='\033[1;32m'
 CYAN='\033[1;36m'
 NC='\033[0m'
 
+echo -e ""
+echo -e ""
 echo -e "${GREEN}========================="
 echo "Storybook installing..."
 echo "========================="
@@ -13,6 +15,7 @@ echo -e "${NC}"
 #region  //*=========== Install Packages ===========
 echo -e "${NC}"
 echo -e "${GREEN}[Step 1] Initializing Storybook with Webpack 5${NC}"
+echo -e ""
 echo -e "This may take a while to download."
 echo ""
 echo y | npx sb init --builder webpack5
@@ -20,18 +23,19 @@ echo yes
 echo -e ""
 echo -e "Installing Dev Packages: ${GREEN}@storybook/addon @storybook/addon-postcss @storybook/theming @storybook/addon-a11y plop inquirer-fuzzy-path"
 echo -e "${NC}"
-yarn add -D @storybook/addon-postcss plop inquirer-fuzzy-path
+yarn add -D @storybook/addon-postcss @storybook/theming @storybook/addon-a11y plop inquirer-fuzzy-path
 
 echo -e "${NC}"
 echo -e "${GREEN}[Step 2] Adding Webpack 5 as a resolution${NC}"
+echo ""
 npx --no -y npe resolutions.webpack "^5"
 echo ""
 yarn
 
 echo ""
 echo -e "${GREEN}[Step 3] Adding storybook-generate components command${NC}"
-npx npe scripts.storybook:generate "yarn plop"
 echo ""
+npx npe scripts.storybook:generate "yarn plop"
 # endregion  //*======== Install Packages ===========
 
 #region  //*=========== Create Directories ===========
@@ -72,5 +76,5 @@ echo ""
 echo "Run yarn storybook:generate to generate your storybook components"
 echo "Run yarn storybook to start storybook"
 
-5
+echo | 5
 
