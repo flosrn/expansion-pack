@@ -20,9 +20,9 @@ echo ""
 echo y | npx sb init --builder webpack5
 echo yes
 echo -e ""
-echo -e "Installing Dev Packages: ${GREEN}@storybook/addon @storybook/addon-postcss @storybook/theming @storybook/addon-a11y plop inquirer-fuzzy-path"
+echo -e "Installing Dev Packages: ${GREEN}@storybook/addons @storybook/addon-postcss @storybook/addon-a11y @storybook/theming plop inquirer-fuzzy-path"
 echo -e "${NC}"
-yarn add -D @storybook/addon-postcss @storybook/theming @storybook/addon-a11y plop inquirer-fuzzy-path
+yarn add -D @storybook/addons @storybook/addon-postcss @storybook/addon-a11y @storybook/theming plop inquirer-fuzzy-path
 
 echo -e "${NC}"
 echo -e "${GREEN}[Step 2] Adding Webpack 5 as a resolution${NC}"
@@ -66,9 +66,9 @@ done
 echo ""
 echo -e "${GREEN}[Step 5] Adding storybook folder to tailwind purge${NC}"
 sed -i -e "s/'.\/src\/\*\*\/\*.{js,jsx,ts,tsx}'/'.\/src\/\*\*\/\*.{js,jsx,ts,tsx}', '.\/.storybook\/\*.{js,jsx,ts,tsx}'/g" tailwind.config.js
+rm -r tailwind.config.js-e
 echo ""
 echo "tailwind.config.js has been updated."
-rm -r tailwind.config.js-e
 
 echo ""
 echo -e "${CYAN}============================================"
