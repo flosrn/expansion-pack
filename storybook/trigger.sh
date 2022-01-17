@@ -20,9 +20,9 @@ echo ""
 echo y | npx sb init --builder webpack5
 echo yes
 echo -e ""
-echo -e "Installing Dev Packages: ${GREEN}@storybook/addons @storybook/addon-postcss @storybook/addon-a11y @storybook/theming plop inquirer-fuzzy-path"
+echo -e "Installing Dev Packages: ${GREEN}@storybook/addons @storybook/addon-postcss @storybook/addon-a11y @storybook/theming storybook-theme-css-vars plop inquirer-fuzzy-path"
 echo -e "${NC}"
-yarn add -D @storybook/addons @storybook/addon-postcss @storybook/addon-a11y @storybook/theming plop inquirer-fuzzy-path
+yarn add -D @storybook/addons @storybook/addon-postcss @storybook/addon-a11y @storybook/theming storybook-theme-css-vars plop inquirer-fuzzy-path
 
 echo -e "${NC}"
 echo -e "${GREEN}[Step 2] Adding Webpack 5 as a resolution${NC}"
